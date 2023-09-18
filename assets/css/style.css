@@ -1,0 +1,12 @@
+#start {
+    position: absolute;
+    left: 50%;
+    font-size: 50px;
+    justify-content: center;
+    color: lightgreen;
+    background-color: green;
+}
+
+button:hover {
+    box-shadow: 5px 5px 5px;
+}
