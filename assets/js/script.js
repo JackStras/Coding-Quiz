@@ -21,6 +21,7 @@ function startquiz(event) {
             timer.text("Time: " + timeleft)
             timeleft--
         } else {
+            clearInterval(timeInterval)
             endquiz()
         }
     }, 1000)    
