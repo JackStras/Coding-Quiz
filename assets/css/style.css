@@ -1,6 +1,6 @@
 #start {
     position: absolute;
-    left: 50%;
+    left: 46%;
     font-size: 50px;
     justify-content: center;
     color: lightgreen;
@@ -9,4 +9,21 @@
 
 button:hover {
     box-shadow: 5px 5px 5px;
+}
+
+#title {
+    text-align: center;
+    font-size: 50px;
+}
+
+#rules {
+    text-align: center;
+    font-size: 30px;
+}
+
+#timer {
+    position: absolute;
+    right: 2px;
+    font-size: 20px;
+
 }
