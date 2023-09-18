@@ -5,6 +5,9 @@ var quiz_section = $("main")
 var timer = $("#timer")
 var question_text = $("#text")
 var buttons = $(".answer_button")
+var initials = $("input")
+var submit = $("#submit")
+var form = $("form")
 var timeleft = 60
 var questions = [
     {
@@ -53,8 +56,22 @@ var questions = [
 
 function endquiz() {
     var score = timeleft
+    var high_scorer = localStorage.getItem("name")
+    var high_score = localStorage.getItem("score")
     timer.remove()
     quiz_section.children().remove()
+    form.append($("<p>").text("High Score: " + high_scorer + " " + high_score))
+    form.append($("<p>").text("Your score is " + score))
+    form.removeAttr("hidden")
+    submit.on("click", function(event) {
+        event.preventDefault()
+        var saved_initial = initials.val()
+        localStorage.setItem("name", saved_initial)
+        if (score > high_score) {
+            localStorage.setItem("score", score)
+        }
+
+    })
 }
 
 function startquiz(event) {
